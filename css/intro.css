@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    font-family: "Exo", sans-serif; 
+    text-align: center;
+}
+
+.intro-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+}
+
+.biohazard-symbol {
+    font-size: 120px;
+    color: #cf0;
+    text-shadow: 0 0 20px #cf0, 0 0 40px #cf0;
+    animation: glow 1s infinite alternate;
+}
+
+.welcome-text {
+    font-size: 36px;
+    color: #cf0;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: flicker 1.5s infinite alternate;
+}
+
+.sub-text {
+    font-size: 20px;
+    color:#cf0;
+    opacity: 0.8;
+}
+.enter-btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color:#000;
+    background: #cf0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #cf0;
+}
+
+.enter-btn:hover {
+    background: #cf0;
+    box-shadow: 0 0 20px #cf0;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #cf0 , 0 0 30px #cf0;
+    }
+    to {
+        text-shadow: 0 0 30px #cf0, 0 0 60px #cf0;
+    }
+}
+
+@keyframes flicker {
+    0% {opacity: 1;}
+    50% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
+
+@media(max-width: 700px) {
+    .biohazard-symbol, .welcome-text, .sub-text ,.enter-btn{
+        font-size: 110px;
+    }
+}
+
+@media(max-width: 500px) {
+    .biohazard-symbol, .welcome-text, .sub-text ,.enter-btn {
+        font-size: 80px;
+    }
+}
+
+@media(max-width: 340px) {
+    .biohazard-symbol, .welcome-text, .sub-text ,.enter-btn {
+        font-size: 50px;
+    }
+    .biohazard-symbol {
+        display: none;
+    }
+}
